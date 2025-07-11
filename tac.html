@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Redirection</title>
+  </head>
+  <body>
+    <script>
+      // Function to check if the user is on a mobile device
+      function isMobileDevice() {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        );
+      }
+
+      // Redirect function
+      function redirectUser() {
+        if (isMobileDevice()) {
+          // Redirect to link A (mobile)
+          window.location.href =
+            "https://app.powerbi.com/view?r=eyJrIjoiNzQ5ODJiYTEtZGUzMy00MDRhLWFmYjAtNzk5MzgwN2U4MzA4IiwidCI6IjFkNzJjMTFiLTBlMzItNDllOS1hNTMwLTI2ZDkzN2I2NjVmOCIsImMiOjEwfQ%3D%3D&pageName=24007d4af831f062bdd9";
+        } else {
+          // Redirect to link B (desktop)
+          window.location.href =
+			"https://app.powerbi.com/view?r=eyJrIjoiNzQ5ODJiYTEtZGUzMy00MDRhLWFmYjAtNzk5MzgwN2U4MzA4IiwidCI6IjFkNzJjMTFiLTBlMzItNDllOS1hNTMwLTI2ZDkzN2I2NjVmOCIsImMiOjEwfQ%3D%3D&pageName=24007d4af831f062bdd9";
+        }
+      }
+
+      // Call the redirect function when the page loads
+      redirectUser();
+    </script>
+  </body>
+</html>
